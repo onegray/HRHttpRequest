@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB7342671527721100138E8F /* EGOHTTPRequest+REST.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7342661527721100138E8F /* EGOHTTPRequest+REST.m */; };
+		ABE3AC201525F32E00517755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE3AC1F1525F32E00517755 /* UIKit.framework */; };
+		ABE3AC221525F32E00517755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE3AC211525F32E00517755 /* Foundation.framework */; };
+		ABE3AC241525F32E00517755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE3AC231525F32E00517755 /* CoreGraphics.framework */; };
+		ABE3AC2A1525F32E00517755 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABE3AC281525F32E00517755 /* InfoPlist.strings */; };
+		ABE3AC2C1525F32E00517755 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC2B1525F32E00517755 /* main.m */; };
+		ABE3AC301525F32E00517755 /* HRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC2F1525F32E00517755 /* HRAppDelegate.m */; };
+		ABE3AC331525F32E00517755 /* HRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC321525F32E00517755 /* HRFirstViewController.m */; };
+		ABE3AC3A1525F32F00517755 /* HRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC391525F32F00517755 /* HRSecondViewController.m */; };
+		ABE3AC411525F32F00517755 /* HRFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE3AC3F1525F32F00517755 /* HRFirstViewController.xib */; };
+		ABE3AC441525F32F00517755 /* HRSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE3AC421525F32F00517755 /* HRSecondViewController.xib */; };
+		ABE3ACD11525F3EE00517755 /* EGOHTTPFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC4C1525F3ED00517755 /* EGOHTTPFormRequest.m */; };
+		ABE3ACD21525F3EE00517755 /* EGOHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC4E1525F3ED00517755 /* EGOHTTPRequest.m */; };
+		ABE3ACD31525F3EE00517755 /* HRConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC511525F3EE00517755 /* HRConnection.m */; };
+		ABE3ACD41525F3EE00517755 /* HRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC531525F3EE00517755 /* HRRequest.m */; };
+		ABE3ACD51525F3EE00517755 /* HRResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC551525F3EE00517755 /* HRResponse.m */; };
+		ABE3ACD91525F3EE00517755 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC5C1525F3EE00517755 /* CDataScanner.m */; };
+		ABE3ACDA1525F3EE00517755 /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC5F1525F3EE00517755 /* CFilteringJSONSerializer.m */; };
+		ABE3ACDB1525F3EE00517755 /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC611525F3EE00517755 /* CJSONDeserializer_BlocksExtensions.m */; };
+		ABE3ACDC1525F3EE00517755 /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC631525F3EE00517755 /* CJSONSerialization.m */; };
+		ABE3ACDD1525F3EE00517755 /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC651525F3EE00517755 /* CJSONSerializedData.m */; };
+		ABE3ACDE1525F3EE00517755 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC681525F3EE00517755 /* CDataScanner_Extensions.m */; };
+		ABE3ACDF1525F3EE00517755 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC6A1525F3EE00517755 /* NSDictionary_JSONExtensions.m */; };
+		ABE3ACE01525F3EE00517755 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC6D1525F3EE00517755 /* CJSONDeserializer.m */; };
+		ABE3ACE11525F3EE00517755 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC6F1525F3EE00517755 /* CJSONScanner.m */; };
+		ABE3ACE21525F3EE00517755 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AC711525F3EE00517755 /* CJSONSerializer.m */; };
+		ABE3AD341525F74000517755 /* TwitterSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD331525F74000517755 /* TwitterSearchRequest.m */; };
+		ABE3AD3B152623C800517755 /* HRResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD3A152623C700517755 /* HRResponseParser.m */; };
+		ABE3B00E1526602600517755 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD4E1526602500517755 /* CXMLDocument_CreationExtensions.m */; };
+		ABE3B00F1526602600517755 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD501526602500517755 /* CXMLNode_CreationExtensions.m */; };
+		ABE3B0101526602600517755 /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD521526602500517755 /* CXHTMLDocument.m */; };
+		ABE3B0111526602600517755 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD541526602500517755 /* CXMLDocument.m */; };
+		ABE3B0121526602600517755 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD561526602500517755 /* CXMLDocument_PrivateExtensions.m */; };
+		ABE3B0131526602600517755 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD581526602500517755 /* CXMLElement.m */; };
+		ABE3B0141526602600517755 /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD5A1526602500517755 /* CXMLElement_CreationExtensions.m */; };
+		ABE3B0151526602600517755 /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD5C1526602500517755 /* CXMLElement_ElementTreeExtensions.m */; };
+		ABE3B0161526602600517755 /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD5E1526602500517755 /* CXMLNamespaceNode.m */; };
+		ABE3B0171526602600517755 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD601526602500517755 /* CXMLNode.m */; };
+		ABE3B0181526602600517755 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD621526602500517755 /* CXMLNode_PrivateExtensions.m */; };
+		ABE3B0191526602600517755 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD641526602500517755 /* CXMLNode_XPathExtensions.m */; };
+		ABE3B01A1526602600517755 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3AD671526602500517755 /* CTidy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB7342651527721100138E8F /* EGOHTTPRequest+REST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EGOHTTPRequest+REST.h"; sourceTree = "<group>"; };
+		AB7342661527721100138E8F /* EGOHTTPRequest+REST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EGOHTTPRequest+REST.m"; sourceTree = "<group>"; };
+		ABE3AC1B1525F32E00517755 /* HRSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABE3AC1F1525F32E00517755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ABE3AC211525F32E00517755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABE3AC231525F32E00517755 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABE3AC271525F32E00517755 /* HRSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HRSample-Info.plist"; sourceTree = "<group>"; };
+		ABE3AC291525F32E00517755 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABE3AC2B1525F32E00517755 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABE3AC2D1525F32E00517755 /* HRSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HRSample-Prefix.pch"; sourceTree = "<group>"; };
+		ABE3AC2E1525F32E00517755 /* HRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRAppDelegate.h; sourceTree = "<group>"; };
+		ABE3AC2F1525F32E00517755 /* HRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRAppDelegate.m; sourceTree = "<group>"; };
+		ABE3AC311525F32E00517755 /* HRFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRFirstViewController.h; sourceTree = "<group>"; };
+		ABE3AC321525F32E00517755 /* HRFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRFirstViewController.m; sourceTree = "<group>"; };
+		ABE3AC381525F32F00517755 /* HRSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRSecondViewController.h; sourceTree = "<group>"; };
+		ABE3AC391525F32F00517755 /* HRSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HRSecondViewController.m; sourceTree = "<group>"; };
+		ABE3AC401525F32F00517755 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HRFirstViewController.xib; sourceTree = "<group>"; };
+		ABE3AC431525F32F00517755 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HRSecondViewController.xib; sourceTree = "<group>"; };
+		ABE3AC4B1525F3ED00517755 /* EGOHTTPFormRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOHTTPFormRequest.h; sourceTree = "<group>"; };
+		ABE3AC4C1525F3ED00517755 /* EGOHTTPFormRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOHTTPFormRequest.m; sourceTree = "<group>"; };
+		ABE3AC4D1525F3ED00517755 /* EGOHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOHTTPRequest.h; sourceTree = "<group>"; };
+		ABE3AC4E1525F3ED00517755 /* EGOHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOHTTPRequest.m; sourceTree = "<group>"; };
+		ABE3AC501525F3EE00517755 /* HRConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRConnection.h; sourceTree = "<group>"; };
+		ABE3AC511525F3EE00517755 /* HRConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRConnection.m; sourceTree = "<group>"; };
+		ABE3AC521525F3EE00517755 /* HRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRRequest.h; sourceTree = "<group>"; };
+		ABE3AC531525F3EE00517755 /* HRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRRequest.m; sourceTree = "<group>"; };
+		ABE3AC541525F3EE00517755 /* HRResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRResponse.h; sourceTree = "<group>"; };
+		ABE3AC551525F3EE00517755 /* HRResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRResponse.m; sourceTree = "<group>"; };
+		ABE3AC5B1525F3EE00517755 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		ABE3AC5C1525F3EE00517755 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		ABE3AC5E1525F3EE00517755 /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
+		ABE3AC5F1525F3EE00517755 /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
+		ABE3AC601525F3EE00517755 /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
+		ABE3AC611525F3EE00517755 /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
+		ABE3AC621525F3EE00517755 /* CJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerialization.h; sourceTree = "<group>"; };
+		ABE3AC631525F3EE00517755 /* CJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerialization.m; sourceTree = "<group>"; };
+		ABE3AC641525F3EE00517755 /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
+		ABE3AC651525F3EE00517755 /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
+		ABE3AC671525F3EE00517755 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		ABE3AC681525F3EE00517755 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		ABE3AC691525F3EE00517755 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		ABE3AC6A1525F3EE00517755 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		ABE3AC6C1525F3EE00517755 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		ABE3AC6D1525F3EE00517755 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		ABE3AC6E1525F3EE00517755 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		ABE3AC6F1525F3EE00517755 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		ABE3AC701525F3EE00517755 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		ABE3AC711525F3EE00517755 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		ABE3AC721525F3EE00517755 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		ABE3AD321525F74000517755 /* TwitterSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterSearchRequest.h; path = Requests/TwitterSearchRequest.h; sourceTree = "<group>"; };
+		ABE3AD331525F74000517755 /* TwitterSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterSearchRequest.m; path = Requests/TwitterSearchRequest.m; sourceTree = "<group>"; };
+		ABE3AD39152623C700517755 /* HRResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRResponseParser.h; sourceTree = "<group>"; };
+		ABE3AD3A152623C700517755 /* HRResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRResponseParser.m; sourceTree = "<group>"; };
+		ABE3AD4D1526602500517755 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		ABE3AD4E1526602500517755 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		ABE3AD4F1526602500517755 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		ABE3AD501526602500517755 /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		ABE3AD511526602500517755 /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
+		ABE3AD521526602500517755 /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
+		ABE3AD531526602500517755 /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		ABE3AD541526602500517755 /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		ABE3AD551526602500517755 /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		ABE3AD561526602500517755 /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		ABE3AD571526602500517755 /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		ABE3AD581526602500517755 /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		ABE3AD591526602500517755 /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		ABE3AD5A1526602500517755 /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		ABE3AD5B1526602500517755 /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		ABE3AD5C1526602500517755 /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		ABE3AD5D1526602500517755 /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		ABE3AD5E1526602500517755 /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		ABE3AD5F1526602500517755 /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		ABE3AD601526602500517755 /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		ABE3AD611526602500517755 /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		ABE3AD621526602500517755 /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		ABE3AD631526602500517755 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		ABE3AD641526602500517755 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		ABE3AD661526602500517755 /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
+		ABE3AD671526602500517755 /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		ABE3AD681526602500517755 /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABE3AC181525F32E00517755 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE3AC201525F32E00517755 /* UIKit.framework in Frameworks */,
+				ABE3AC221525F32E00517755 /* Foundation.framework in Frameworks */,
+				ABE3AC241525F32E00517755 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABE3AC101525F32E00517755 = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC4A1525F3ED00517755 /* EGOHTTPRequest */,
+				ABE3AD401526602500517755 /* TouchXML */,
+				ABE3AC561525F3EE00517755 /* TouchJSON */,
+				ABE3AC4F1525F3ED00517755 /* HRConnection */,
+				ABE3AC251525F32E00517755 /* HRSample */,
+				ABE3AC1E1525F32E00517755 /* Frameworks */,
+				ABE3AC1C1525F32E00517755 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABE3AC1C1525F32E00517755 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC1B1525F32E00517755 /* HRSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABE3AC1E1525F32E00517755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC1F1525F32E00517755 /* UIKit.framework */,
+				ABE3AC211525F32E00517755 /* Foundation.framework */,
+				ABE3AC231525F32E00517755 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABE3AC251525F32E00517755 /* HRSample */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AD311525F58800517755 /* Requests */,
+				ABE3AC2E1525F32E00517755 /* HRAppDelegate.h */,
+				ABE3AC2F1525F32E00517755 /* HRAppDelegate.m */,
+				ABE3AC311525F32E00517755 /* HRFirstViewController.h */,
+				ABE3AC321525F32E00517755 /* HRFirstViewController.m */,
+				ABE3AC3F1525F32F00517755 /* HRFirstViewController.xib */,
+				ABE3AC381525F32F00517755 /* HRSecondViewController.h */,
+				ABE3AC391525F32F00517755 /* HRSecondViewController.m */,
+				ABE3AC421525F32F00517755 /* HRSecondViewController.xib */,
+				ABE3AC261525F32E00517755 /* Supporting Files */,
+			);
+			path = HRSample;
+			sourceTree = "<group>";
+		};
+		ABE3AC261525F32E00517755 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC271525F32E00517755 /* HRSample-Info.plist */,
+				ABE3AC281525F32E00517755 /* InfoPlist.strings */,
+				ABE3AC2B1525F32E00517755 /* main.m */,
+				ABE3AC2D1525F32E00517755 /* HRSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABE3AC4A1525F3ED00517755 /* EGOHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC4B1525F3ED00517755 /* EGOHTTPFormRequest.h */,
+				ABE3AC4C1525F3ED00517755 /* EGOHTTPFormRequest.m */,
+				ABE3AC4D1525F3ED00517755 /* EGOHTTPRequest.h */,
+				ABE3AC4E1525F3ED00517755 /* EGOHTTPRequest.m */,
+			);
+			name = EGOHTTPRequest;
+			path = ../EGOHTTPRequest;
+			sourceTree = "<group>";
+		};
+		ABE3AC4F1525F3ED00517755 /* HRConnection */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC501525F3EE00517755 /* HRConnection.h */,
+				ABE3AC511525F3EE00517755 /* HRConnection.m */,
+				ABE3AC521525F3EE00517755 /* HRRequest.h */,
+				ABE3AC531525F3EE00517755 /* HRRequest.m */,
+				ABE3AC541525F3EE00517755 /* HRResponse.h */,
+				ABE3AC551525F3EE00517755 /* HRResponse.m */,
+				ABE3AD39152623C700517755 /* HRResponseParser.h */,
+				ABE3AD3A152623C700517755 /* HRResponseParser.m */,
+				AB7342651527721100138E8F /* EGOHTTPRequest+REST.h */,
+				AB7342661527721100138E8F /* EGOHTTPRequest+REST.m */,
+			);
+			name = HRConnection;
+			path = ../HRConnection;
+			sourceTree = "<group>";
+		};
+		ABE3AC561525F3EE00517755 /* TouchJSON */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC5A1525F3EE00517755 /* Source */,
+			);
+			name = TouchJSON;
+			path = ../TouchJSON;
+			sourceTree = "<group>";
+		};
+		ABE3AC5A1525F3EE00517755 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC5B1525F3EE00517755 /* CDataScanner.h */,
+				ABE3AC5C1525F3EE00517755 /* CDataScanner.m */,
+				ABE3AC5D1525F3EE00517755 /* Experimental */,
+				ABE3AC661525F3EE00517755 /* Extensions */,
+				ABE3AC6B1525F3EE00517755 /* JSON */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		ABE3AC5D1525F3EE00517755 /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC5E1525F3EE00517755 /* CFilteringJSONSerializer.h */,
+				ABE3AC5F1525F3EE00517755 /* CFilteringJSONSerializer.m */,
+				ABE3AC601525F3EE00517755 /* CJSONDeserializer_BlocksExtensions.h */,
+				ABE3AC611525F3EE00517755 /* CJSONDeserializer_BlocksExtensions.m */,
+				ABE3AC621525F3EE00517755 /* CJSONSerialization.h */,
+				ABE3AC631525F3EE00517755 /* CJSONSerialization.m */,
+				ABE3AC641525F3EE00517755 /* CJSONSerializedData.h */,
+				ABE3AC651525F3EE00517755 /* CJSONSerializedData.m */,
+			);
+			path = Experimental;
+			sourceTree = "<group>";
+		};
+		ABE3AC661525F3EE00517755 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC671525F3EE00517755 /* CDataScanner_Extensions.h */,
+				ABE3AC681525F3EE00517755 /* CDataScanner_Extensions.m */,
+				ABE3AC691525F3EE00517755 /* NSDictionary_JSONExtensions.h */,
+				ABE3AC6A1525F3EE00517755 /* NSDictionary_JSONExtensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ABE3AC6B1525F3EE00517755 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AC6C1525F3EE00517755 /* CJSONDeserializer.h */,
+				ABE3AC6D1525F3EE00517755 /* CJSONDeserializer.m */,
+				ABE3AC6E1525F3EE00517755 /* CJSONScanner.h */,
+				ABE3AC6F1525F3EE00517755 /* CJSONScanner.m */,
+				ABE3AC701525F3EE00517755 /* CJSONSerializer.h */,
+				ABE3AC711525F3EE00517755 /* CJSONSerializer.m */,
+				ABE3AC721525F3EE00517755 /* JSONRepresentation.h */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		ABE3AD311525F58800517755 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AD321525F74000517755 /* TwitterSearchRequest.h */,
+				ABE3AD331525F74000517755 /* TwitterSearchRequest.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
+		ABE3AD401526602500517755 /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AD4B1526602500517755 /* Source */,
+			);
+			name = TouchXML;
+			path = ../TouchXML;
+			sourceTree = "<group>";
+		};
+		ABE3AD4B1526602500517755 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AD4C1526602500517755 /* Creation */,
+				ABE3AD511526602500517755 /* CXHTMLDocument.h */,
+				ABE3AD521526602500517755 /* CXHTMLDocument.m */,
+				ABE3AD531526602500517755 /* CXMLDocument.h */,
+				ABE3AD541526602500517755 /* CXMLDocument.m */,
+				ABE3AD551526602500517755 /* CXMLDocument_PrivateExtensions.h */,
+				ABE3AD561526602500517755 /* CXMLDocument_PrivateExtensions.m */,
+				ABE3AD571526602500517755 /* CXMLElement.h */,
+				ABE3AD581526602500517755 /* CXMLElement.m */,
+				ABE3AD591526602500517755 /* CXMLElement_CreationExtensions.h */,
+				ABE3AD5A1526602500517755 /* CXMLElement_CreationExtensions.m */,
+				ABE3AD5B1526602500517755 /* CXMLElement_ElementTreeExtensions.h */,
+				ABE3AD5C1526602500517755 /* CXMLElement_ElementTreeExtensions.m */,
+				ABE3AD5D1526602500517755 /* CXMLNamespaceNode.h */,
+				ABE3AD5E1526602500517755 /* CXMLNamespaceNode.m */,
+				ABE3AD5F1526602500517755 /* CXMLNode.h */,
+				ABE3AD601526602500517755 /* CXMLNode.m */,
+				ABE3AD611526602500517755 /* CXMLNode_PrivateExtensions.h */,
+				ABE3AD621526602500517755 /* CXMLNode_PrivateExtensions.m */,
+				ABE3AD631526602500517755 /* CXMLNode_XPathExtensions.h */,
+				ABE3AD641526602500517755 /* CXMLNode_XPathExtensions.m */,
+				ABE3AD651526602500517755 /* Tidy */,
+				ABE3AD681526602500517755 /* TouchXML.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		ABE3AD4C1526602500517755 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AD4D1526602500517755 /* CXMLDocument_CreationExtensions.h */,
+				ABE3AD4E1526602500517755 /* CXMLDocument_CreationExtensions.m */,
+				ABE3AD4F1526602500517755 /* CXMLNode_CreationExtensions.h */,
+				ABE3AD501526602500517755 /* CXMLNode_CreationExtensions.m */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		ABE3AD651526602500517755 /* Tidy */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3AD661526602500517755 /* CTidy.h */,
+				ABE3AD671526602500517755 /* CTidy.m */,
+			);
+			path = Tidy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABE3AC1A1525F32E00517755 /* HRSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABE3AC471525F32F00517755 /* Build configuration list for PBXNativeTarget "HRSample" */;
+			buildPhases = (
+				ABE3AC171525F32E00517755 /* Sources */,
+				ABE3AC181525F32E00517755 /* Frameworks */,
+				ABE3AC191525F32E00517755 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HRSample;
+			productName = HRSample;
+			productReference = ABE3AC1B1525F32E00517755 /* HRSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABE3AC121525F32E00517755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HR;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = ABE3AC151525F32E00517755 /* Build configuration list for PBXProject "HRSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABE3AC101525F32E00517755;
+			productRefGroup = ABE3AC1C1525F32E00517755 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABE3AC1A1525F32E00517755 /* HRSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABE3AC191525F32E00517755 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE3AC2A1525F32E00517755 /* InfoPlist.strings in Resources */,
+				ABE3AC411525F32F00517755 /* HRFirstViewController.xib in Resources */,
+				ABE3AC441525F32F00517755 /* HRSecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABE3AC171525F32E00517755 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABE3AC2C1525F32E00517755 /* main.m in Sources */,
+				ABE3AC301525F32E00517755 /* HRAppDelegate.m in Sources */,
+				ABE3AC331525F32E00517755 /* HRFirstViewController.m in Sources */,
+				ABE3AC3A1525F32F00517755 /* HRSecondViewController.m in Sources */,
+				ABE3ACD11525F3EE00517755 /* EGOHTTPFormRequest.m in Sources */,
+				ABE3ACD21525F3EE00517755 /* EGOHTTPRequest.m in Sources */,
+				ABE3ACD31525F3EE00517755 /* HRConnection.m in Sources */,
+				ABE3ACD41525F3EE00517755 /* HRRequest.m in Sources */,
+				ABE3ACD51525F3EE00517755 /* HRResponse.m in Sources */,
+				ABE3ACD91525F3EE00517755 /* CDataScanner.m in Sources */,
+				ABE3ACDA1525F3EE00517755 /* CFilteringJSONSerializer.m in Sources */,
+				ABE3ACDB1525F3EE00517755 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				ABE3ACDC1525F3EE00517755 /* CJSONSerialization.m in Sources */,
+				ABE3ACDD1525F3EE00517755 /* CJSONSerializedData.m in Sources */,
+				ABE3ACDE1525F3EE00517755 /* CDataScanner_Extensions.m in Sources */,
+				ABE3ACDF1525F3EE00517755 /* NSDictionary_JSONExtensions.m in Sources */,
+				ABE3ACE01525F3EE00517755 /* CJSONDeserializer.m in Sources */,
+				ABE3ACE11525F3EE00517755 /* CJSONScanner.m in Sources */,
+				ABE3ACE21525F3EE00517755 /* CJSONSerializer.m in Sources */,
+				ABE3AD341525F74000517755 /* TwitterSearchRequest.m in Sources */,
+				ABE3AD3B152623C800517755 /* HRResponseParser.m in Sources */,
+				ABE3B00E1526602600517755 /* CXMLDocument_CreationExtensions.m in Sources */,
+				ABE3B00F1526602600517755 /* CXMLNode_CreationExtensions.m in Sources */,
+				ABE3B0101526602600517755 /* CXHTMLDocument.m in Sources */,
+				ABE3B0111526602600517755 /* CXMLDocument.m in Sources */,
+				ABE3B0121526602600517755 /* CXMLDocument_PrivateExtensions.m in Sources */,
+				ABE3B0131526602600517755 /* CXMLElement.m in Sources */,
+				ABE3B0141526602600517755 /* CXMLElement_CreationExtensions.m in Sources */,
+				ABE3B0151526602600517755 /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				ABE3B0161526602600517755 /* CXMLNamespaceNode.m in Sources */,
+				ABE3B0171526602600517755 /* CXMLNode.m in Sources */,
+				ABE3B0181526602600517755 /* CXMLNode_PrivateExtensions.m in Sources */,
+				ABE3B0191526602600517755 /* CXMLNode_XPathExtensions.m in Sources */,
+				ABE3B01A1526602600517755 /* CTidy.m in Sources */,
+				AB7342671527721100138E8F /* EGOHTTPRequest+REST.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ABE3AC281525F32E00517755 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE3AC291525F32E00517755 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ABE3AC3F1525F32F00517755 /* HRFirstViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE3AC401525F32F00517755 /* en */,
+			);
+			name = HRFirstViewController.xib;
+			sourceTree = "<group>";
+		};
+		ABE3AC421525F32F00517755 /* HRSecondViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABE3AC431525F32F00517755 /* en */,
+			);
+			name = HRSecondViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABE3AC451525F32F00517755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ABE3AC461525F32F00517755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABE3AC481525F32F00517755 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HRSample/HRSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "HRSample/HRSample-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ABE3AC491525F32F00517755 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HRSample/HRSample-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "HRSample/HRSample-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABE3AC151525F32E00517755 /* Build configuration list for PBXProject "HRSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE3AC451525F32F00517755 /* Debug */,
+				ABE3AC461525F32F00517755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABE3AC471525F32F00517755 /* Build configuration list for PBXNativeTarget "HRSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABE3AC481525F32F00517755 /* Debug */,
+				ABE3AC491525F32F00517755 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABE3AC121525F32E00517755 /* Project object */;
+}
