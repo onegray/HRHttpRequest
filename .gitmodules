@@ -1,0 +1,9 @@
+[submodule "TouchJSON"]
+	path = TouchJSON
+	url = https://github.com/TouchCode/TouchJSON.git
+[submodule "TouchXML"]
+	path = TouchXML
+	url = https://github.com/TouchCode/TouchXML.git
+[submodule "EGOHTTPRequest"]
+	path = EGOHTTPRequest
+	url = git@github.com:onegray/EGOHTTPRequest.git
