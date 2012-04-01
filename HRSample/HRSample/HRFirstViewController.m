@@ -8,7 +8,7 @@
 
 #import "HRFirstViewController.h"
 
-#import "HRConnection.h"
+#import "HRTwitterConnection.h"
 #import "TwitterSearchRequest.h"
 
 
@@ -31,7 +31,7 @@
 
 -(void) dealloc 
 {
-    [[HRConnection sharedConnection] cancelRequestsForDelegate:self];
+    [[HRTwitterConnection sharedConnection] cancelRequestsForDelegate:self];
     [tableView release];
     [results release];
     [super dealloc];
@@ -43,7 +43,7 @@
 
     if(stop) return;
     
-    [[HRConnection sharedConnection] performRequest:[TwitterSearchRequest hrWithQuery:@"test" delegate:(id)self]];
+    [[HRTwitterConnection sharedConnection] performRequest:[TwitterSearchRequest hrWithQuery:@"test" delegate:(id)self]];
     
     float v = rand()*0.2 / RAND_MAX;
     [self performSelector:@selector(start) withObject:nil afterDelay:v];
@@ -53,7 +53,7 @@
     
     if(stop) return;
 
-    [[HRConnection sharedConnection] cancelRequestsForDelegate:self];
+    [[HRTwitterConnection sharedConnection] cancelRequestsForDelegate:self];
     
     float v = rand()*0.2 / RAND_MAX;
     [self performSelector:@selector(finish) withObject:nil afterDelay:v];
@@ -63,8 +63,8 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar 
 {
-    [[HRConnection sharedConnection] cancelRequestsForDelegate:self];
-    [[HRConnection sharedConnection] performRequest:[TwitterSearchRequest hrWithQuery:searchBar.text delegate:(id)self]];
+    [[HRTwitterConnection sharedConnection] cancelRequestsForDelegate:self];
+    [[HRTwitterConnection sharedConnection] performRequest:[TwitterSearchRequest hrWithQuery:searchBar.text delegate:(id)self]];
     
     [searchBar resignFirstResponder];    
 }

@@ -15,7 +15,9 @@
 	NSMutableArray* requests;
 }
 
-+(HRConnection*) sharedConnection;
++(HRConnection*) sharedConnectionToHost:(NSString*)hostBaseString;
++(void) registerConnection:(HRConnection*)connection;
+-(id) initWithBaseURL:(NSURL*)url;
 
 @property (nonatomic, readonly) NSURL* baseURL;
 

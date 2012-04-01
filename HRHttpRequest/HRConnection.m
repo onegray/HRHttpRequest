@@ -9,28 +9,40 @@
 #import "HRRequest.h"
 #import "EGOHTTPRequest.h"
 
-static HRConnection* instance = nil;
+static NSMutableDictionary* connectionPool;
 
 @implementation HRConnection
 @synthesize baseURL;
 
-+(HRConnection*) sharedConnection
++(HRConnection*) sharedConnectionToHost:(NSString*)hostBaseString 
 {
-	if(instance==nil)
-	{
-		instance = [[HRConnection alloc] init];
-	}
-	return instance;
+	return [connectionPool objectForKey:hostBaseString];
 }
 
--(id) init
++(void) registerConnection:(HRConnection*)connection
+{
+	if(!connectionPool) 
+	{
+		connectionPool = [NSMutableDictionary dictionaryWithCapacity:1];
+	}
+	[connectionPool setObject:connection forKey:[[connection baseURL] absoluteString]];
+}
+
+-(id) initWithBaseURL:(NSURL*)url
 {
 	if(self=[super init])
 	{
 		requests = [[NSMutableArray alloc] init];
-        baseURL = [NSURL URLWithString:@"http://search.twitter.com"];
+        baseURL = [url retain];
 	}
 	return self;
+}
+
+-(void) dealloc
+{
+	[requests release];
+	[baseURL release];
+	[super dealloc];
 }
 
 -(void) performRequest:(HRRequest*)request
