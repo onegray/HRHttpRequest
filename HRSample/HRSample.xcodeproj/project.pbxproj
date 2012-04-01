@@ -70,6 +70,7 @@
 		AB3617FD1528C16B000182D5 /* HRMySpaceConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRMySpaceConnection.m; path = Requests/HRMySpaceConnection.m; sourceTree = "<group>"; };
 		AB3617FF1528C2BE000182D5 /* MySpacePeopleSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySpacePeopleSearchRequest.h; path = Requests/MySpacePeopleSearchRequest.h; sourceTree = "<group>"; };
 		AB3618001528C2BE000182D5 /* MySpacePeopleSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySpacePeopleSearchRequest.m; path = Requests/MySpacePeopleSearchRequest.m; sourceTree = "<group>"; };
+		AB3618021528D1CD000182D5 /* HRConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRConfig.h; sourceTree = "<group>"; };
 		ABE3AC1B1525F32E00517755 /* HRSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE3AC1F1525F32E00517755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABE3AC211525F32E00517755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,6 +162,7 @@
 			children = (
 				AB3617ED1528B38D000182D5 /* EGOHTTPRequest+REST.h */,
 				AB3617EE1528B38D000182D5 /* EGOHTTPRequest+REST.m */,
+				AB3618021528D1CD000182D5 /* HRConfig.h */,
 				AB3617EF1528B38D000182D5 /* HRConnection.h */,
 				AB3617F01528B38D000182D5 /* HRConnection.m */,
 				AB3617F11528B38D000182D5 /* HRRequest.h */,

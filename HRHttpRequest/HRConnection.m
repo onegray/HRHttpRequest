@@ -5,6 +5,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "HRConfig.h"
 #import "HRConnection.h"
 #import "HRRequest.h"
 #import "EGOHTTPRequest.h"
@@ -64,14 +65,12 @@ static NSMutableDictionary* connectionPool;
 
 -(void)cancelRequestsForDelegate:(id)requestDelegate
 {
-	NSLog(@"HRConnection cancelRequestsForDelegate: %@", requestDelegate);
-	
 	NSArray* requestsCopy = [NSArray arrayWithArray:requests];
 	for(HRRequest* request in requestsCopy)
 	{
 		if (request.delegate == requestDelegate)
 		{
-			NSLog(@"HRConnection: cancelling request: %@", request);
+			HRLog(@"HRConnection: cancelling request: %@", request);
 			[request cancel];
 		}
 	}

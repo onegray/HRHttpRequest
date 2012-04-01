@@ -5,6 +5,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "HRConfig.h"
 #import "HRResponse.h"
 
 static NSString* kHRErrorDomain = @"com.httprequest.error";

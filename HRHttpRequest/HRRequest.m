@@ -5,6 +5,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import "HRConfig.h"
 #import "HRRequest.h"
 #import "HRConnection.h"
 #import "EGOHTTPRequest.h"
@@ -67,6 +68,7 @@
 	[httpRequest setDidFailSelector:@selector(httpRequestDidFail:withError:)];
     [httpRequest setDidCancelSelector:@selector(httpRequestDidCancel:)];
 
+	HRLog(@"Starting request %@ to: %@", httpRequest, [httpRequest.url absoluteString]);
     
 	if(synchronous) {
 		[httpRequest startSynchronous];
@@ -90,9 +92,12 @@
 
 - (void)httpRequestDidFinish:(EGOHTTPRequest*)aRequest
 {
-	NSLog(@"httpRequestDidFinish: (responseStatus:%d)", aRequest.responseStatusCode);
-	//NSLog(@"Response data: %@", aRequest.responseString);
-
+	HRLog(@"httpRequestDidFinish:%@  - %d", aRequest, [aRequest responseStatusCode]);
+	
+#if HR_VERBOSE_TRAFFIC
+	HRLog(@"Response data:\n%@\n-", aRequest.responseString);
+#endif	
+	
     NSError* error = nil;
     id parsedResult = [responseParser parseResponseData:aRequest.responseData error:&error];
 
@@ -114,7 +119,7 @@
 
 - (void)httpRequestDidFail:(EGOHTTPRequest*)aRequest withError:(NSError *)error
 {
-	NSLog(@"httpRequestDidFail: withError:%@", error);
+	HRLog(@"httpRequestDidFail:%@ withError:%@", aRequest, error);
     
 	if(!aRequest.cancelled)
 	{
@@ -129,16 +134,24 @@
 
 - (void)httpRequestDidCancel:(EGOHTTPRequest*)aRequest
 {
-	NSLog(@"httpRequestDidCancel");
+	HRLog(@"httpRequestDidCancel:%@", aRequest);
     [self performSelectorOnMainThread:@selector(httpRequestDidCancelOnMainThread) withObject:nil waitUntilDone:NO];
 }
 
 -(void) httpRequestDidFinishOnMainThreadWithParsedResponseObject:(id)parsedResult
 {
+	HRLog(@"httpRequestDidFinishOnMainThreadWithParsedResponseObject (%@)", self);
+#if HR_VERBOSE_TRAFFIC
+	HRLog(@"ParsedResponseObject:\n%@", parsedResult);
+#endif	
+
 	if(!httpRequest.cancelled)
 	{
-		NSLog(@"%@ httpRequestDidFinishOnMainThreadWithParsedResponseObject: %@", self, parsedResult);
 		[self requestDidFinishWithParsedResponseObject:parsedResult];
+	}
+	else 
+	{
+		HRLog(@"Request was cancelled (%@)", self);
 	}
     
     [self retain];
@@ -149,10 +162,14 @@
 
 -(void) httpRequestDidFailOnMainThreadWithError:(NSError*)error
 {
+	HRLog(@"httpRequestDidFailOnMainThreadWithError(%@): %@", self, [error localizedDescription]);
 	if(!httpRequest.cancelled)
 	{
-		NSLog(@"%@ requestDidFailWithError: %@", self, [error localizedDescription]);
 		[self requestDidFailWithError:error];
+	}
+	else 
+	{
+		HRLog(@"Request was cancelled (%@)", self);
 	}
 
     [self retain];
@@ -163,6 +180,8 @@
 
 -(void) httpRequestDidCancelOnMainThread
 {
+	HRLog(@"httpRequestDidCancelOnMainThread (%@)", self);
+	
     [self retain];
 	[connection finalizeRequest:self];
     [self requestDidFinalize];

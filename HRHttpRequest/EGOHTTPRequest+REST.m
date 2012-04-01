@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import "HRConfig.h"
 #import "EGOHTTPRequest+REST.h"
 #import "EGOHTTPRequest.h"
 #import "EGOHTTPFormRequest.h"
@@ -14,6 +15,8 @@
 
 + (EGOHTTPRequest*) makeGetRequestToHost:(NSURL*)hostURL path:(NSString*)path parameters:(NSDictionary*)keyedParameters
 {
+	HRLog(@"building GET request with params:%@", keyedParameters);
+
 	NSMutableArray * parameters = [NSMutableArray arrayWithCapacity:[keyedParameters count]];
 	for (id key in [keyedParameters allKeys])
 	{
@@ -22,9 +25,7 @@
 	}
 	
 	NSURL* url = [NSURL URLWithString:[path stringByAppendingFormat:@"?%@", [parameters componentsJoinedByString:@"&"]] relativeToURL:hostURL];
-    
-	NSLog(@"building GET request to:%@ \n with params:%@", [url absoluteString], keyedParameters);
-	
+    	
 	EGOHTTPRequest* httpRequest = [[EGOHTTPRequest alloc] initWithURL:url];
 	[httpRequest addRequestHeader:@"Accept" value:@"application/json"];
 	[httpRequest addRequestHeader:@"Content-Type" value:@"application/json"];	
@@ -34,9 +35,9 @@
 
 + (EGOHTTPRequest*) makePostRequestToHost:(NSURL*)hostURL path:(NSString*)path parameters:(NSDictionary*)keyedParameters
 {
+	HRLog(@"building POST request with params: %@", keyedParameters);
+
 	NSURL* url = [NSURL URLWithString:path relativeToURL:hostURL];
-    
-	NSLog(@"building POST request to:%@ \n with params:%@", [url absoluteString], keyedParameters);
 	
 	EGOHTTPRequest* httpRequest = [[EGOHTTPFormRequest alloc] initWithURL:url];
 	[httpRequest addRequestHeader:@"Accept" value:@"application/json"];
@@ -55,8 +56,6 @@
 {	
 	static NSString * const kBoundary = @"OxH29cHeI0jjj";
     
-	NSURL* url = [NSURL URLWithString:path relativeToURL:hostURL];
-    
     NSMutableDictionary* logParams = [NSMutableDictionary dictionaryWithDictionary:keyedParameters];
     for(NSString* key in keyedParameters)
     {
@@ -66,8 +65,9 @@
             [logParams setObject:[NSString stringWithFormat:@"<NSData of %d bytes long>", [param length]] forKey:key];
         }
     }
-	NSLog(@"building multipart/form-data request to:%@ \n with params: \n%@", [url absoluteString], logParams);
-    
+	HRLog(@"building multipart/form-data request with params: \n%@", logParams);
+ 
+	NSURL* url = [NSURL URLWithString:path relativeToURL:hostURL];
     
 	EGOHTTPRequest* httpRequest = [[EGOHTTPRequest alloc] initWithURL:url];
 	httpRequest.requestMethod = @"POST";
@@ -119,9 +119,9 @@
 
 + (EGOHTTPRequest*) makeDeleteRequestToHost:(NSURL*)hostURL path:(NSString*)path parameters:(NSDictionary*)keyedParameters
 {
+	HRLog(@"building DELETE request with params:%@", keyedParameters);
+
 	NSURL* url = [NSURL URLWithString:path relativeToURL:hostURL];
-    
-	NSLog(@"building DELETE request to:%@", [url absoluteString]);
 	
 	EGOHTTPRequest* httpRequest = [[EGOHTTPFormRequest alloc] initWithURL:url];
 	[httpRequest setRequestMethod:@"DELETE"];
