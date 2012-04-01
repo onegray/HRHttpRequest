@@ -13,6 +13,8 @@
 		AB3617F91528B38D000182D5 /* HRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3617F21528B38D000182D5 /* HRRequest.m */; };
 		AB3617FA1528B38D000182D5 /* HRResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3617F41528B38D000182D5 /* HRResponse.m */; };
 		AB3617FB1528B38D000182D5 /* HRResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3617F61528B38D000182D5 /* HRResponseParser.m */; };
+		AB3617FE1528C16B000182D5 /* HRMySpaceConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3617FD1528C16B000182D5 /* HRMySpaceConnection.m */; };
+		AB3618011528C2BE000182D5 /* MySpacePeopleSearchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3618001528C2BE000182D5 /* MySpacePeopleSearchRequest.m */; };
 		ABE3AC201525F32E00517755 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE3AC1F1525F32E00517755 /* UIKit.framework */; };
 		ABE3AC221525F32E00517755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE3AC211525F32E00517755 /* Foundation.framework */; };
 		ABE3AC241525F32E00517755 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE3AC231525F32E00517755 /* CoreGraphics.framework */; };
@@ -64,6 +66,10 @@
 		AB3617F41528B38D000182D5 /* HRResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRResponse.m; sourceTree = "<group>"; };
 		AB3617F51528B38D000182D5 /* HRResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRResponseParser.h; sourceTree = "<group>"; };
 		AB3617F61528B38D000182D5 /* HRResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRResponseParser.m; sourceTree = "<group>"; };
+		AB3617FC1528C16B000182D5 /* HRMySpaceConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HRMySpaceConnection.h; path = Requests/HRMySpaceConnection.h; sourceTree = "<group>"; };
+		AB3617FD1528C16B000182D5 /* HRMySpaceConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HRMySpaceConnection.m; path = Requests/HRMySpaceConnection.m; sourceTree = "<group>"; };
+		AB3617FF1528C2BE000182D5 /* MySpacePeopleSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySpacePeopleSearchRequest.h; path = Requests/MySpacePeopleSearchRequest.h; sourceTree = "<group>"; };
+		AB3618001528C2BE000182D5 /* MySpacePeopleSearchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySpacePeopleSearchRequest.m; path = Requests/MySpacePeopleSearchRequest.m; sourceTree = "<group>"; };
 		ABE3AC1B1525F32E00517755 /* HRSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE3AC1F1525F32E00517755 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ABE3AC211525F32E00517755 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -307,6 +313,10 @@
 				ABE3AD331525F74000517755 /* TwitterSearchRequest.m */,
 				AB3617E31528AE6E000182D5 /* HRTwitterConnection.h */,
 				AB3617E41528AE6E000182D5 /* HRTwitterConnection.m */,
+				AB3617FC1528C16B000182D5 /* HRMySpaceConnection.h */,
+				AB3617FD1528C16B000182D5 /* HRMySpaceConnection.m */,
+				AB3617FF1528C2BE000182D5 /* MySpacePeopleSearchRequest.h */,
+				AB3618001528C2BE000182D5 /* MySpacePeopleSearchRequest.m */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -470,6 +480,8 @@
 				AB3617F91528B38D000182D5 /* HRRequest.m in Sources */,
 				AB3617FA1528B38D000182D5 /* HRResponse.m in Sources */,
 				AB3617FB1528B38D000182D5 /* HRResponseParser.m in Sources */,
+				AB3617FE1528C16B000182D5 /* HRMySpaceConnection.m in Sources */,
+				AB3618011528C2BE000182D5 /* MySpacePeopleSearchRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

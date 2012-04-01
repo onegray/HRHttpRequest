@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HRSecondViewController : UIViewController
+@interface HRSecondViewController : UIViewController<UITableViewDataSource, UISearchBarDelegate>
+
+@property (nonatomic, retain) IBOutlet UITableView* tableView;
 
 @end

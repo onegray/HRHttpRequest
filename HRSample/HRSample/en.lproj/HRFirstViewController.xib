@@ -68,7 +68,8 @@
 						<int key="IBUIContentMode">3</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBBarStyle">1</int>
-						<string key="IBText">test</string>
+						<string key="IBText">iphone</string>
+						<string key="IBPlaceholder">&lt;search query&gt;</string>
 						<object class="IBUITextInputTraits" key="IBTextInputTraits">
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>

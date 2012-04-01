@@ -23,7 +23,7 @@ static NSMutableDictionary* connectionPool;
 {
 	if(!connectionPool) 
 	{
-		connectionPool = [NSMutableDictionary dictionaryWithCapacity:1];
+		connectionPool = [[NSMutableDictionary alloc] initWithCapacity:1];
 	}
 	[connectionPool setObject:connection forKey:[[connection baseURL] absoluteString]];
 }

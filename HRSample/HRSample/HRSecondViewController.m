@@ -7,37 +7,94 @@
 //
 
 #import "HRSecondViewController.h"
+#import "HRMySpaceConnection.h"
+#import "MySpacePeopleSearchRequest.h"
 
 @interface HRSecondViewController ()
+
+@property (nonatomic, retain) NSArray* results;
 
 @end
 
 @implementation HRSecondViewController
+@synthesize tableView;
+@synthesize results;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
+        self.title = @"MySpace";
     }
     return self;
 }
-							
-- (void)viewDidLoad
+
+-(void) dealloc 
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [[HRMySpaceConnection sharedConnection] cancelRequestsForDelegate:self];
+    [tableView release];
+    [results release];
+    [super dealloc];
 }
 
-- (void)viewDidUnload
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar 
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    [[HRMySpaceConnection sharedConnection] cancelRequestsForDelegate:self];
+    [[HRMySpaceConnection sharedConnection] performRequest:[MySpacePeopleSearchRequest hrWithSearchTerms:searchBar.text delegate:(id)self]];
+    
+    [searchBar resignFirstResponder];    
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    [searchBar resignFirstResponder];
 }
+
+-(void) hrMySpacePeopleSearch:(MySpacePeopleSearchRequest*)request didFinishWithResponse:(MySpacePeopleSearchResponse*)response
+{
+    if(response.succeed)
+    {
+        self.results = response.searchResults;
+        [tableView reloadData];
+    }
+    else
+    {
+        [[[[UIAlertView alloc] initWithTitle:@"Error" message:[response.error localizedDescription] 
+                                    delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] autorelease] show];
+    }
+}
+
+
+#pragma mark -
+#pragma mark UITableViewDataSource methods
+
+-(int) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [results count];
+}
+
+-(UITableViewCell*) tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+    static NSString* cellId = @"cellId";
+    UITableViewCell* cell = [tv dequeueReusableCellWithIdentifier:cellId];
+    if(!cell) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId] autorelease];
+    }
+    cell.textLabel.text = [results objectAtIndex:indexPath.row];
+    return cell;
+}
+
+
 
 @end
+
+
+
+
+
+
+
+
+

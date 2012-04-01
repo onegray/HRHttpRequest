@@ -24,7 +24,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
+        self.title = @"Twitter";
     }
     return self;
 }
@@ -36,30 +36,6 @@
     [results release];
     [super dealloc];
 }
-
-
-/*
--(void) start {
-
-    if(stop) return;
-    
-    [[HRTwitterConnection sharedConnection] performRequest:[TwitterSearchRequest hrWithQuery:@"test" delegate:(id)self]];
-    
-    float v = rand()*0.2 / RAND_MAX;
-    [self performSelector:@selector(start) withObject:nil afterDelay:v];
-}
-
--(void) finish {
-    
-    if(stop) return;
-
-    [[HRTwitterConnection sharedConnection] cancelRequestsForDelegate:self];
-    
-    float v = rand()*0.2 / RAND_MAX;
-    [self performSelector:@selector(finish) withObject:nil afterDelay:v];
-}
-*/
-
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar 
 {
